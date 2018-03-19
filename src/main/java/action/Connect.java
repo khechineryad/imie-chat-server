@@ -1,4 +1,4 @@
-package Action;
+package action;
 
 import com.mysql.cj.jdbc.Driver;
 

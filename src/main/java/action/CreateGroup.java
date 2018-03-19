@@ -1,4 +1,4 @@
-package Action;
+package action;
 
 public class CreateGroup extends Action {
     private String idUser;

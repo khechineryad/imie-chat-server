@@ -1,4 +1,4 @@
-package Action;
+package action;
 
 public class DeleteGroup extends Action {
     private String idUser;

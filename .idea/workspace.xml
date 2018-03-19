@@ -2,75 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42b51238-ede3-4605-a3e2-9f5c9766dc42" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__fr_imie_chat_websocket_server_specification_0_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__mysql_mysql_connector_java_6_0_6.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/chat.server.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/chat.server_main.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/chat.server_test.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/Action.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/AddUser.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/Connect.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/CreateGroup.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/DeleteGroup.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/DeleteMessage.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/SendMessage.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/SignIn.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/SignOut.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/4.6/fileChanges/last-build.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/4.6/fileHashes/fileHashes.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/4.6/fileHashes/fileHashes.lock" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/4.6/taskHistory/taskHistory.lock" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/buildOutputCleanup/cache.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/vcsWorkingDirs/gc.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/compiler.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/gradle.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/libraries/Gradle__fr_imie_chat_websocket_server_specification_0_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/libraries/Gradle__junit_junit_4_12.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/libraries/Gradle__mysql_mysql_connector_java_6_0_6.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/modules/chat.server.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/modules/chat.server_main.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/modules/chat.server_test.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/uiDesigner.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/build.gradle" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/Action.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/AddUser.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/CreateGroup.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/DeleteGroup.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/DeleteMessage.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/Main$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/Main$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/Main$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/SendMessage.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/SignIn.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/SignOut.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/settings.gradle" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/Action.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/AddUser.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/Connect.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/CreateGroup.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/DeleteGroup.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/DeleteMessage.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/SendMessage.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/SignIn.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/SignOut.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Main.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/Action.java" afterPath="$PROJECT_DIR$/src/main/java/action/Action.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/AddUser.java" afterPath="$PROJECT_DIR$/src/main/java/action/AddUser.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/Connect.java" afterPath="$PROJECT_DIR$/src/main/java/action/Connect.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/CreateGroup.java" afterPath="$PROJECT_DIR$/src/main/java/action/CreateGroup.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/DeleteGroup.java" afterPath="$PROJECT_DIR$/src/main/java/action/DeleteGroup.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/DeleteMessage.java" afterPath="$PROJECT_DIR$/src/main/java/action/DeleteMessage.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/SendMessage.java" afterPath="$PROJECT_DIR$/src/main/java/action/SendMessage.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/SignIn.java" afterPath="$PROJECT_DIR$/src/main/java/action/SignIn.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/SignOut.java" afterPath="$PROJECT_DIR$/src/main/java/action/SignOut.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -89,17 +34,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+            <state relative-caret-position="300">
+              <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/java/Action</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -431,6 +403,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -466,7 +439,33 @@
             <path>
               <item name="imie-chat-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="imie-chat-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="imie-chat-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="imie-chat-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="imie-chat-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="imie-chat-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="imie-chat-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="imie-chat-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="imie-chat-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="imie-chat-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -515,6 +514,24 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="Unnamed" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -604,13 +621,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -622,22 +640,43 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Correction sur l'organisation en package du projet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction sur l'organisation en package du projet" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        <state relative-caret-position="60">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>

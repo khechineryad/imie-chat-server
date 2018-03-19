@@ -1,4 +1,4 @@
-package Action;
+package action;
 
 public class SignIn extends Action {
     private String email;

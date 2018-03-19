@@ -1,4 +1,4 @@
-package Action;
+package action;
 
 public class SendMessage extends Action {
     private String text;

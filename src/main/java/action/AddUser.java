@@ -1,4 +1,4 @@
-package Action;
+package action;
 
 public class AddUser extends Action {
 

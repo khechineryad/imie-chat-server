@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/imie-chat-server.iml" filepath="$PROJECT_DIR$/imie-chat-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chat.server.iml" filepath="$PROJECT_DIR$/.idea/modules/chat.server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chat.server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/chat.server_main.iml" group="chat.server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chat.server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/chat.server_test.iml" group="chat.server" />
     </modules>
   </component>
 </project>

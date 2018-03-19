@@ -1,10 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d0cece0-6606-4e73-a5e5-f17f130a93d1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="42b51238-ede3-4605-a3e2-9f5c9766dc42" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__fr_imie_chat_websocket_server_specification_0_1_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__mysql_mysql_connector_java_6_0_6.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/chat.server.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/chat.server_main.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/chat.server_test.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/Action.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/AddUser.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/Connect.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/CreateGroup.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/DeleteGroup.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/DeleteMessage.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/SendMessage.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/SignIn.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Action/SignOut.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/4.6/fileChanges/last-build.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/4.6/fileHashes/fileHashes.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/4.6/fileHashes/fileHashes.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/4.6/taskHistory/taskHistory.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/buildOutputCleanup/cache.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.gradle/vcsWorkingDirs/gc.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/compiler.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/gradle.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/libraries/Gradle__fr_imie_chat_websocket_server_specification_0_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/libraries/Gradle__junit_junit_4_12.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/libraries/Gradle__mysql_mysql_connector_java_6_0_6.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/modules/chat.server.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/modules/chat.server_main.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/modules/chat.server_test.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/uiDesigner.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/build.gradle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/Action.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/AddUser.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/CreateGroup.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/DeleteGroup.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/DeleteMessage.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/Main$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/Main$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/Main$3.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/SendMessage.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/SignIn.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/out/production/classes/Action/SignOut.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/settings.gradle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/Action.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/AddUser.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/Connect.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/CreateGroup.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/DeleteGroup.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/DeleteMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/SendMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/SignIn.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Action/SignOut.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/chat.server/src/main/java/Main.java" afterPath="" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,48 +87,13 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="imie-chat-server" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="imie-chat-server" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/settings.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -70,19 +105,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
+    <option name="myGradleHomes">
+      <map>
+        <entry key="$PROJECT_DIR$" value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6" />
+      </map>
+    </option>
+    <option name="myGradleVersions">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4.6" />
+      </map>
+    </option>
     <option name="availableProjects">
       <map>
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="imie-chat-server" />
+              <option name="name" value="chat.server" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="imie-chat-server" />
+                <option name="name" value="chat.server" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
             </list>
@@ -90,11 +135,288 @@
         </entry>
       </map>
     </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'chat.server'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'chat.server'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in root project 'chat.server'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'chat.server'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs this project as a JVM application" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="run" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Creates OS specific scripts to run the project as a JVM application." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="startScripts" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'chat.server'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the project as a distribution as-is." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'chat.server'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the main distributions" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'chat.server'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'chat.server'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="distTar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="distZip" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'chat.server'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="3042238111000" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="2150271622" />
-        <entry key="$PROJECT_DIR$/settings.gradle" value="688901246" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="4104951487" />
+        <entry key="$PROJECT_DIR$/settings.gradle" value="3439691822" />
+      </map>
+    </option>
+    <option name="projectBuildClasspath">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$PROJECT_DIR$">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="chat.server" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/ant-1.9.9.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/ant-launcher-1.9.9.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-base-services-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-base-services-groovy-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-build-cache-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-build-option-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-cli-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-core-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-core-api-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-docs-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-installation-beacon-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-jvm-services-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-kotlin-dsl-0.15.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-kotlin-dsl-tooling-builders-0.15.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-kotlin-dsl-tooling-models-0.15.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-launcher-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-logging-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-messaging-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-model-core-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-model-groovy-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-native-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-persistent-cache-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-process-services-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-resources-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-runtime-api-info-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-tooling-api-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/gradle-wrapper-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/groovy-all-2.4.12.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-announce-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-antlr-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-build-cache-http-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-build-comparison-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-build-init-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-code-quality-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-composite-builds-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-dependency-management-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-diagnostics-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-ear-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-ide-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-ide-native-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-ide-play-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-ivy-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-jacoco-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-javascript-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-language-groovy-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-language-java-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-language-jvm-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-language-native-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-language-scala-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-maven-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-osgi-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-platform-base-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-platform-jvm-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-platform-native-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-platform-play-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-plugin-development-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-plugin-use-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-plugins-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-publish-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-reporting-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-resources-gcs-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-resources-http-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-resources-s3-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-resources-sftp-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-scala-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-signing-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-test-kit-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-testing-base-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-testing-junit-platform-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-testing-jvm-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-testing-native-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-tooling-api-builders-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-version-control-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/gradle-workers-4.6.jar" />
+                  <option value="$PROJECT_DIR$/../../opt/gradle/gradle-4.6/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
       </map>
     </option>
     <option name="externalProjectsViewState">
@@ -102,7 +424,6 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
         <entry key="$PROJECT_DIR$/chat.project" value="PREVIEW" />
       </map>
     </option>
@@ -110,7 +431,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/settings.gradle" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -134,9 +455,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,37 +468,20 @@
               <item name="imie-chat-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="imie-chat-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imie-chat-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="imie-chat-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imie-chat-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="" />
-    </key>
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -213,22 +515,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-    </configuration>
-    <configuration name="Unnamed" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -299,11 +585,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0d0cece0-6606-4e73-a5e5-f17f130a93d1" name="Default" comment="" />
-      <created>1521110711103</created>
+      <changelist id="42b51238-ede3-4605-a3e2-9f5c9766dc42" name="Default" comment="" />
+      <created>1521469444163</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1521110711103</updated>
+      <updated>1521469444163</updated>
     </task>
     <servers />
   </component>
@@ -311,33 +597,33 @@
     <frame x="0" y="23" width="1280" height="740" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -348,39 +634,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Action.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="true" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="45">
+          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="gradleExecuteTaskHistory">
-    <option value="" />
   </component>
   <component name="masterDetails">
     <states>
@@ -433,7 +694,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>imie-chat-server</last-edited>
+          <last-edited>chat.server</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -458,6 +719,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Gradle: fr.imie:chat-websocket-server-specification:0.1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

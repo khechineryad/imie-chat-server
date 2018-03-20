@@ -53,6 +53,13 @@ public class Main {
                     if (typeAction.getType().compareTo("inscription") == 0) {
                         AddUser addUser = MAPPER.readValue(message, AddUser.class);
                         System.out.println("Message de "+sessionId+": "+message);
+
+                        Connect connexion = new Connect();
+                        connexion.getConnection();
+
+                        /* Création de l'objet gérant les requêtes */
+                        Statement statement = connexion.createStatement();
+
                     }
                     if (typeAction.getType().compareTo("message") == 0) {
                         SendMessage sendMessage = MAPPER.readValue(message, SendMessage.class);

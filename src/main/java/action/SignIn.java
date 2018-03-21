@@ -5,7 +5,7 @@ public class SignIn extends Action {
     private String password;
 
 
-    public String getUsername() {
+    public String getEmail() {
         return email;
     }
 

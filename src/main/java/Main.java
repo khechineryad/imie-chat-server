@@ -1,11 +1,9 @@
-import action.Action;
-import action.AddUser;
-import action.SendMessage;
-import action.SignIn;
+import action.*;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.imie.chat.specification.WebSocketServer;
+import fr.imie.chat.specification.exceptions.SessionNotFoundException;
 import fr.imie.chat.specification.listeners.CloseWebSocketListener;
 import fr.imie.chat.specification.listeners.MessageWebSocketListener;
 import fr.imie.chat.specification.listeners.OpenWebSocketListener;
@@ -14,6 +12,10 @@ import javax.websocket.DeploymentException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Main {
     private static final ObjectMapper MAPPER = new ObjectMapper()
@@ -48,18 +50,69 @@ public class Main {
                     if (typeAction.getType().compareTo("connexion") == 0) {
                         SignIn signIn = MAPPER.readValue(message, SignIn.class);
                         System.out.println("Message de "+sessionId+": "+message);
+
+                        System.out.println(signIn.getEmail());
+
+                        // On se connecte à la base de données via la classe Connect
+                        Connection connexion = Connect.getConnection();
+
+                        ResultSet resultat = null;
+
+                        // Création de l'objet gérant les requêtes
+                        try {
+                            Statement statement = connexion.createStatement();
+
+                            // Exécution d'une requête de lecture
+                            resultat = statement.executeQuery( "SELECT id_utilisateur, pseudo FROM Utilisateur WHERE email='"+signIn.getEmail()+"' AND mot_de_passe='"+signIn.getPassword()+"';" );
+
+                            System.out.println( "Requête \"SELECT id_utilisateur, pseudo FROM Utilisateur;\" effectuée !" );
+
+                            /* Récupération des données du résultat de la requête de lecture */
+                            while ( resultat.next() ) {
+                                int idUser = resultat.getInt( "id_utilisateur" );
+                                String username = resultat.getString( "pseudo" );
+
+                                System.out.println("Données retournées par la requête : id_utilisateur = " + idUser + ", pseudo = " + username + ".");
+
+                                // On créer un objet user pour stocker l'id et le pseudo
+                                User user = new User();
+
+                                user.setType("return_connection");
+                                user.setUsername(username);
+                                user.setIdUser(idUser);
+
+                                String retour = MAPPER.writeValueAsString(user);
+                                try {
+                                    webSocketServer.send(sessionId, retour);
+                                    System.out.println("On envoie ceci: "+retour);
+                                } catch (SessionNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                            System.out.println("Utilisateur identifié");
+
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
                     }
 
                     if (typeAction.getType().compareTo("inscription") == 0) {
                         AddUser addUser = MAPPER.readValue(message, AddUser.class);
                         System.out.println("Message de "+sessionId+": "+message);
 
-                        Connect connexion = new Connect();
-                        connexion.getConnection();
+                        // On se connecte à la base de données via la classe Connect
+                        Connection connexion = Connect.getConnection();
 
-                        /* Création de l'objet gérant les requêtes */
-                        Statement statement = connexion.createStatement();
+                        // Création de l'objet gérant les requêtes
+                        try {
+                            Statement statement = connexion.createStatement();
+                            // Exécution d'une requête d'écriture
+                            int statut = statement.executeUpdate( "INSERT INTO Utilisateur (pseudo, email, mot_de_passe) VALUES ('"+addUser.getUsername()+"', '"+addUser.getEmail()+"', '"+addUser.getPassword()+"');" );
+                            System.out.println("Nouvel utilisateur ajouté");
 
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
                     }
                     if (typeAction.getType().compareTo("message") == 0) {
                         SendMessage sendMessage = MAPPER.readValue(message, SendMessage.class);

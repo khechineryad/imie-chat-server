@@ -12,7 +12,6 @@ import javax.websocket.DeploymentException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -75,25 +74,12 @@ public class Main {
 
                                 System.out.println("Données retournées par la requête : id_utilisateur = " + idUser + ", pseudo = " + username + ".");
 
-                                // On génère une key
-                                String key = null;
-
-                                try {
-                                    key = RandomKeyGen.generate(256);
-                                } catch (NoSuchAlgorithmException e) {
-                                    System.out.println("Exception caught");
-                                    e.printStackTrace();
-                                }
-                                System.out.println(key);
-
-
                                 // On créer un objet user pour stocker l'id et le pseudo
                                 User user = new User();
 
                                 user.setType("return_connection");
                                 user.setUsername(username);
                                 user.setIdUser(idUser);
-                                user.setKey(key);
 
                                 String retour = MAPPER.writeValueAsString(user);
                                 try {

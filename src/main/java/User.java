@@ -4,7 +4,6 @@ public class User {
     private String username;
     private Integer idUser;
     private String type;
-    private String key;
 
     public String getType() {
         return type;
@@ -28,13 +27,5 @@ public class User {
 
     public void setIdUser(Integer idUser) {
         this.idUser = idUser;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
     }
 }

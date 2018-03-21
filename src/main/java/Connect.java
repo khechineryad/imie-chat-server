@@ -13,7 +13,7 @@ public class Connect 	{
     {
         try
         {
-            String url = "jdbc:mysql://localhost/db_chat?serverTimezone=UTC";
+            String url = "jdbc:mysql://localhost/db_chat?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
             String utilisateur = "root";
             String motDePasse = "";
             DriverManager.registerDriver(new Driver());

@@ -1,9 +1,13 @@
 package action;
 
+import javafx.scene.input.DataFormat;
+
 public class SendMessage extends Action {
     private String text;
     private String idGroupe;
-    private String idUser;
+    private String userKey;
+    private Integer hour;
+    private Integer minute;
 
     public String getText() {
         return text;
@@ -21,11 +25,27 @@ public class SendMessage extends Action {
         this.idGroupe = idGroupe;
     }
 
-    public String getIdUser() {
-        return idUser;
+    public String getUserKey() {
+        return userKey;
     }
 
-    public void setIdUser(String idUser) {
-        this.idUser = idUser;
+    public void setUserKey(String userKey) {
+        this.userKey = userKey;
+    }
+
+    public Integer getHour() {
+        return hour;
+    }
+
+    public void setHour(Integer hour) {
+        this.hour = hour;
+    }
+
+    public Integer getMinute() {
+        return minute;
+    }
+
+    public void setMinute(Integer minute) {
+        this.minute = minute;
     }
 }

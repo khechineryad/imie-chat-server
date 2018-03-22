@@ -1,5 +1,6 @@
 import action.*;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.imie.chat.specification.WebSocketServer;
@@ -46,113 +47,264 @@ public class Main {
         webSocketServer.addListener(new MessageWebSocketListener<String>() {
             @Override
             public void onMessage(String sessionId, String message) {
+                Action typeAction = null;
                 try {
-                    Action typeAction = MAPPER.readValue(message, Action.class);
+                    typeAction = MAPPER.readValue(message, Action.class);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
-                    if (typeAction.getType().compareTo("connexion") == 0) {
-                        SignIn signIn = MAPPER.readValue(message, SignIn.class);
-                        System.out.println("Message de "+sessionId+": "+message);
+                if (typeAction.getType().compareTo("connexion") == 0) {
+                    SignIn signIn = null;
+                    try {
+                        signIn = MAPPER.readValue(message, SignIn.class);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("Message de " + sessionId + ": " + message);
 
-                        System.out.println(signIn.getEmail());
+                    System.out.println(signIn.getEmail());
 
-                        // On se connecte à la base de données via la classe Connect
-                        Connection connexion = Connect.getConnection();
+                    // On se connecte à la base de données via la classe Connect
+                    Connection connexion = Connect.getConnection();
 
-                        ResultSet resultat = null;
+                    ResultSet resultat = null;
 
-                        // Création de l'objet gérant les requêtes
-                        try {
-                            Statement statement = connexion.createStatement();
+                    // Création de l'objet gérant les requêtes
+                    try {
+                        Statement statement = connexion.createStatement();
 
-                            // Exécution d'une requête de lecture
-                            resultat = statement.executeQuery( "SELECT id_utilisateur, pseudo FROM Utilisateur WHERE email='"+signIn.getEmail()+"' AND mot_de_passe='"+signIn.getPassword()+"';" );
+                        // Exécution d'une requête de lecture
+                        resultat = statement.executeQuery("SELECT id_utilisateur, pseudo FROM Utilisateur WHERE email='" + signIn.getEmail() + "' AND mot_de_passe='" + signIn.getPassword() + "';");
 
-                            System.out.println( "Requête SQL effectuée !" );
+                        System.out.println("Requête SQL effectuée !");
 
-                            /* Récupération des données du résultat de la requête de lecture */
-                            while ( resultat.next() ) {
-                                int idUser = resultat.getInt( "id_utilisateur" );
-                                String username = resultat.getString( "pseudo" );
+                        /* Récupération des données du résultat de la requête de lecture */
+                        while (resultat.next()) {
+                            int idUser = resultat.getInt("id_utilisateur");
+                            String username = resultat.getString("pseudo");
 
-                                System.out.println("Données retournées par la requête : id_utilisateur = " + idUser + ", pseudo = " + username + ".");
+                            System.out.println("Données retournées par la requête : id_utilisateur = " + idUser + ", pseudo = " + username + ".");
 
-                                // On génère une key
-                                StringBuffer key = null;
+                            // On génère une key
+                            StringBuffer key = null;
 
+                            try {
                                 try {
-                                    try {
-                                        key = RandomKeyGen.generate();
-                                    } catch (NoSuchProviderException e) {
-                                        e.printStackTrace();
-                                    }
-                                } catch (NoSuchAlgorithmException e) {
-                                    System.out.println("Exception caught on generate key");
+                                    key = RandomKeyGen.generate();
+                                } catch (NoSuchProviderException e) {
                                     e.printStackTrace();
                                 }
-                                System.out.println(key);
+                            } catch (NoSuchAlgorithmException e) {
+                                System.out.println("Exception caught on generate key");
+                                e.printStackTrace();
+                            }
+                            System.out.println(key);
 
-                                // Exécution d'une requête d'écriture de la key en base de données
-                                int statut = statement.executeUpdate( "UPDATE Utilisateur SET cle_session ='"+key+"' WHERE email='"+signIn.getEmail()+"' AND mot_de_passe='"+signIn.getPassword()+"';" );
-                                System.out.println("clé session utilisateur enregistrée");
-                                // On créer un objet user pour stocker l'id et le pseudo
-                                User user = new User();
+                            // Exécution d'une requête d'écriture de la key en base de données
+                            int statut = statement.executeUpdate("UPDATE Utilisateur SET cle_session ='" + key + "' WHERE email='" + signIn.getEmail() + "' AND mot_de_passe='" + signIn.getPassword() + "';");
+                            System.out.println("clé session utilisateur enregistrée");
 
-                                user.setType("return_connection");
-                                user.setUsername(username);
-                                user.setIdUser(idUser);
-                                user.setKey(key);
+                            // On créer un objet user pour stocker l'id et le pseudo
+                            User user = new User();
 
-                                String retour = MAPPER.writeValueAsString(user);
+                            user.setType("return_connection");
+                            user.setUsername(username);
+                            user.setIdUser(idUser);
+                            user.setKey(key);
+
+                            String retour = null;
+                            try {
+                                retour = MAPPER.writeValueAsString(user);
+                            } catch (JsonProcessingException e) {
+                                e.printStackTrace();
+                            }
+                            try {
                                 try {
                                     webSocketServer.send(sessionId, retour);
-                                    System.out.println("On envoie ceci: "+retour);
-                                } catch (SessionNotFoundException e) {
+                                } catch (IOException e) {
                                     e.printStackTrace();
                                 }
-                            }
-                        } catch (SQLException e) {
-                            e.printStackTrace();
-                        }
-                    }
-
-                    if (typeAction.getType().compareTo("inscription") == 0) {
-                        AddUser addUser = MAPPER.readValue(message, AddUser.class);
-                        System.out.println("Message de "+sessionId+": "+message);
-
-                        // On se connecte à la base de données via la classe Connect
-                        Connection connexion = Connect.getConnection();
-
-                        // Création de l'objet gérant les requêtes
-                        try {
-                            Statement statement = connexion.createStatement();
-                            // Exécution d'une requête d'écriture
-                            int statut = statement.executeUpdate( "INSERT INTO Utilisateur (pseudo, email, mot_de_passe) VALUES ('"+addUser.getUsername()+"', '"+addUser.getEmail()+"', '"+addUser.getPassword()+"');" );
-                            System.out.println("Nouvel utilisateur ajouté");
-
-                                String retour = "nouvel utilisateur enregistré";
-                            try {
-                                webSocketServer.send(sessionId, retour);
+                                System.out.println("On envoie ceci: " + retour);
                             } catch (SessionNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            System.out.println("On envoie ceci: "+retour);
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
 
+                if (typeAction.getType().compareTo("inscription") == 0) {
+                    AddUser addUser = null;
+                    try {
+                        addUser = MAPPER.readValue(message, AddUser.class);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("Message de " + sessionId + ": " + message);
+
+                    // On se connecte à la base de données via la classe Connect
+                    Connection connexion = Connect.getConnection();
+
+                    // Création de l'objet gérant les requêtes
+                    try {
+                        Statement statement = connexion.createStatement();
+                        // Exécution d'une requête d'écriture
+                        int statut = statement.executeUpdate("INSERT INTO Utilisateur (pseudo, email, mot_de_passe) VALUES ('" + addUser.getUsername() + "', '" + addUser.getEmail() + "', '" + addUser.getPassword() + "');");
+                        System.out.println("Nouvel utilisateur ajouté");
+
+                        String retour = "nouvel utilisateur enregistré";
+                        try {
+                            try {
+                                webSocketServer.send(sessionId, retour);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        } catch (SessionNotFoundException e) {
+                            e.printStackTrace();
+                        }
+                        System.out.println("On envoie ceci: " + retour);
+
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+
+                // Si l'action est de type "message"
+                if (typeAction.getType().compareTo("message") == 0) {
+                    SendMessage sendMessage = null;
+                    try {
+                        sendMessage = MAPPER.readValue(message, SendMessage.class);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("Message de " + sessionId + ": " + message);
+
+                    // On se connecte à la base de données via la classe Connect
+                    Connection connexion = Connect.getConnection();
+
+                    ResultSet resultat = null;
+
+                    // Création de l'objet gérant les requêtes
+                    try {
+                        Statement statement = null;
+                        try {
+                            statement = connexion.createStatement();
                         } catch (SQLException e) {
                             e.printStackTrace();
                         }
-                    }
-                    if (typeAction.getType().compareTo("message") == 0) {
-                        SendMessage sendMessage = MAPPER.readValue(message, SendMessage.class);
-                        System.out.println("Message de "+sessionId+": "+message);
+
+                        // Exécution d'une requête de lecture
+                        try {
+                            resultat = statement.executeQuery("SELECT id_utilisateur, pseudo FROM Utilisateur WHERE cle_session='" + sendMessage.getUserKey() + "';");
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+                        System.out.println("Requête SQL effectuée !");
+
+                        /* Récupération des données du résultat de la requête de lecture */
+                        while (resultat.next()) {
+                            int idUser = resultat.getInt("id_utilisateur");
+                            String username = resultat.getString("pseudo");
+
+                            System.out.println("Données retournées par la requête : id_utilisateur = " + idUser + ", pseudo = " + username + ".");
+
+                            // Exécution d'une requête d'écriture
+                            int statut = statement.executeUpdate("INSERT INTO Message (contenu, message_heure, message_minute, id_utilisateur) VALUES ('" + sendMessage.getText() + "', '" + sendMessage.getHour() + "', '" + sendMessage.getMinute() + "', '" + idUser + "');");
+                            System.out.println("Nouveau message ajouté");
+
+                            // On créer un objet user pour stocker l'id et le pseudo
+                            Message messageReturn = new Message();
+
+                            messageReturn.setType("return_message");
+                            messageReturn.setUsername(username);
+                            messageReturn.setText(sendMessage.getText());
+                            messageReturn.setHour(sendMessage.getHour());
+                            messageReturn.setMinute(sendMessage.getMinute());
+
+                            String retour = null;
+                            try {
+                                retour = MAPPER.writeValueAsString(messageReturn);
+                            } catch (JsonProcessingException e) {
+                                e.printStackTrace();
+                            }
+                            try {
+                                try {
+                                    webSocketServer.send(sessionId, retour);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                System.out.println("On envoie ceci: " + retour);
+                            } catch (SessionNotFoundException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        } catch (SQLException e) {
+                        e.printStackTrace();
                     }
                 }
-                catch(IOException e) {
-                    System.out.println(e.getMessage());
+                // Partie Groupe
+                if (typeAction.getType().compareTo("groupe") == 0) {
+                    CreateGroup createGroup = null;
+                    try {
+                        createGroup = MAPPER.readValue(message, CreateGroup.class);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("Message de" + sessionId + ": " + message);
+
+                    // On se connecte à la base de données via la classe Connect
+                    Connection connexion = Connect.getConnection();
+
+                    // Création de l'objet gérant les requêtes
+                    ResultSet resultat = null;
+                    try {
+                        Statement statement = connexion.createStatement();
+                        // Exécution d'une requête de lecture
+                        resultat = statement.executeQuery("SELECT id_utilisateur FROM Utilisateur WHERE cle_session='" + createGroup.getUserKey() + "';");
+
+                        /* Récupération des données du résultat de la requête de lecture */
+                        while (resultat.next()) {
+
+                            int idUser = resultat.getInt("id_utilisateur");
+                            System.out.println("Données retournées par la requête : ID = " + idUser + ".");
+
+                            statement.executeUpdate("INSERT INTO Groupe (nom_groupe, id_utilisateur) VALUES ('" + createGroup.getNameGroup() + "', '" + idUser + "');");
+                            System.out.println("Nouveau groupe ajouté : " + createGroup.getNameGroup() + ".");
+
+                            // On créer un objet user pour stocker l'id du groupe
+                            Group group = new Group();
+
+                            group.setType("return_group");
+                            group.setNameGroup(createGroup.getNameGroup());
+
+                            String retour = null;
+                            try {
+                                retour = MAPPER.writeValueAsString(group);
+                            } catch (JsonProcessingException e) {
+                                e.printStackTrace();
+                            }
+                            try {
+                                try {
+                                    webSocketServer.send(sessionId, retour);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                System.out.println("On envoie ceci: " + retour);
+                            } catch (SessionNotFoundException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
 
-        webSocketServer.start();
+                webSocketServer.start();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Appuyez sur une touche pour arrêter le serveur");

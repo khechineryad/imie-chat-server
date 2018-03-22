@@ -1,15 +1,15 @@
 package action;
 
 public class CreateGroup extends Action {
-    private String idUser;
+    private String userKey;
     private String nameGroup;
 
-    public String getIdUser() {
-        return idUser;
+    public String getUserKey() {
+        return userKey;
     }
 
-    public void setIdUser(String idUser) {
-        this.idUser = idUser;
+    public void setUserKey(String userKey) {
+        this.userKey = userKey;
     }
 
     public String getNameGroup() {

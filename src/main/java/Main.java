@@ -91,7 +91,9 @@ public class Main {
                                 }
                                 System.out.println(key);
 
-
+                                // Exécution d'une requête d'écriture de la key en base de données
+                                int statut = statement.executeUpdate( "UPDATE Utilisateur SET cle_session ='"+key+"' WHERE email='"+signIn.getEmail()+"' AND mot_de_passe='"+signIn.getPassword()+"';" );
+                                System.out.println("clé session utilisateur enregistrée");
                                 // On créer un objet user pour stocker l'id et le pseudo
                                 User user = new User();
 

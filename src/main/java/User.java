@@ -4,6 +4,7 @@ public class User {
     private String username;
     private Integer idUser;
     private String type;
+    private StringBuffer key;
 
     public String getType() {
         return type;
@@ -27,5 +28,13 @@ public class User {
 
     public void setIdUser(Integer idUser) {
         this.idUser = idUser;
+    }
+
+    public StringBuffer getKey() {
+        return key;
+    }
+
+    public void setKey(StringBuffer key) {
+        this.key = key;
     }
 }

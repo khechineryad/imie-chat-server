@@ -12,6 +12,8 @@ import javax.websocket.DeploymentException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -65,7 +67,7 @@ public class Main {
                             // Exécution d'une requête de lecture
                             resultat = statement.executeQuery( "SELECT id_utilisateur, pseudo FROM Utilisateur WHERE email='"+signIn.getEmail()+"' AND mot_de_passe='"+signIn.getPassword()+"';" );
 
-                            System.out.println( "Requête \"SELECT id_utilisateur, pseudo FROM Utilisateur;\" effectuée !" );
+                            System.out.println( "Requête SQL effectuée !" );
 
                             /* Récupération des données du résultat de la requête de lecture */
                             while ( resultat.next() ) {
@@ -74,12 +76,29 @@ public class Main {
 
                                 System.out.println("Données retournées par la requête : id_utilisateur = " + idUser + ", pseudo = " + username + ".");
 
+                                // On génère une key
+                                StringBuffer key = null;
+
+                                try {
+                                    try {
+                                        key = RandomKeyGen.generate();
+                                    } catch (NoSuchProviderException e) {
+                                        e.printStackTrace();
+                                    }
+                                } catch (NoSuchAlgorithmException e) {
+                                    System.out.println("Exception caught on generate key");
+                                    e.printStackTrace();
+                                }
+                                System.out.println(key);
+
+
                                 // On créer un objet user pour stocker l'id et le pseudo
                                 User user = new User();
 
                                 user.setType("return_connection");
                                 user.setUsername(username);
                                 user.setIdUser(idUser);
+                                user.setKey(key);
 
                                 String retour = MAPPER.writeValueAsString(user);
                                 try {
@@ -89,8 +108,6 @@ public class Main {
                                     e.printStackTrace();
                                 }
                             }
-                            System.out.println("Utilisateur identifié");
-
                         } catch (SQLException e) {
                             e.printStackTrace();
                         }
@@ -109,6 +126,14 @@ public class Main {
                             // Exécution d'une requête d'écriture
                             int statut = statement.executeUpdate( "INSERT INTO Utilisateur (pseudo, email, mot_de_passe) VALUES ('"+addUser.getUsername()+"', '"+addUser.getEmail()+"', '"+addUser.getPassword()+"');" );
                             System.out.println("Nouvel utilisateur ajouté");
+
+                                String retour = "nouvel utilisateur enregistré";
+                            try {
+                                webSocketServer.send(sessionId, retour);
+                            } catch (SessionNotFoundException e) {
+                                e.printStackTrace();
+                            }
+                            System.out.println("On envoie ceci: "+retour);
 
                         } catch (SQLException e) {
                             e.printStackTrace();

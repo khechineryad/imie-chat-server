@@ -1,3 +1,4 @@
+package chat.object;
 
 public class User {
 

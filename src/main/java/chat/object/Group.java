@@ -1,14 +1,16 @@
+package chat.object;
+
 public class Group {
-    private String nameGroup;
+    private String groupName;
     private Integer idGroup;
     private String type;
 
-    public String getNameGroup() {
-        return nameGroup;
+    public String getGroupName() {
+        return groupName;
     }
 
-    public void setNameGroup(String nameGroup) {
-        this.nameGroup = nameGroup;
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
     }
 
     public Integer getIdGroup() {

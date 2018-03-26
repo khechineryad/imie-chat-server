@@ -1,3 +1,5 @@
+package chat.function;
+
 import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;

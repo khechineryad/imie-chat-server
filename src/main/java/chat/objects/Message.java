@@ -7,7 +7,7 @@ public class Message {
     private String username;
     private String text;
     private String destinataire;
-    private String idGroupe;
+    private String groupName;
     private Integer hour;
     private Integer minute;
 
@@ -51,12 +51,12 @@ public class Message {
         this.destinataire = destinataire;
     }
 
-    public String getIdGroupe() {
-        return idGroupe;
+    public String getGroupName() {
+        return groupName;
     }
 
-    public void setIdGroupe(String idGroupe) {
-        this.idGroupe = idGroupe;
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
     }
 
     public Integer getHour() {

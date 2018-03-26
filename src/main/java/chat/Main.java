@@ -18,6 +18,7 @@ import javax.websocket.DeploymentException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.SQLException;
 
 public class Main {
     private static final ObjectMapper MAPPER = new ObjectMapper()
@@ -76,7 +77,7 @@ public class Main {
                             e.printStackTrace();
                         }
                         System.out.println("Message de " + sessionId + ": " + message +".\nBien reçu !");
-                        // On appelle la méthode pour ajouter un utilisateur (méthode de la classe AddUser)
+                        // On appelle la méthode pour ajouter un utilisateur (méthode de la classe ServiceUser)
                         retour = ServiceUser.addUserFunction(addUser);
                         // On appelle la méthode pour envoyer une réponse
                         sendResponse(sessionId, retour);
@@ -94,7 +95,7 @@ public class Main {
                         }
                         System.out.println("Demande de connection de " + sessionId + ": " + message + "\nBien reçu");
                         System.out.println("adresse email: " + signIn.getEmail());
-                        // On appelle la méthode pour connecter un utilisateur (méthode de la classe SignIn)
+                        // On appelle la méthode pour connecter un utilisateur (méthode de la classe ServiceUser)
                         retour = ServiceUser.signInFunction(signIn);
                         // On appelle la méthode pour envoyer une réponse
                         sendResponse(sessionId, retour);
@@ -111,8 +112,22 @@ public class Main {
                             e.printStackTrace();
                         }
                         System.out.println("Message de " + sessionId + ": " + message);
-                        // On appelle la méthode pour retourner un message (méthode de la classe SendMessage)
+                        // On appelle la méthode pour retourner un message (méthode de la classe ServiceMessage)
                         retour = ServiceMessage.sendMessageFunction(sendMessage);
+                        // On appelle la méthode pour envoyer une réponse
+                        sendResponse(sessionId, retour);
+
+                        break;
+
+                    // Si c'est une action de type history (historique des messages)
+                    case "history":
+                        System.out.println("demande de l'historique des messages");
+                        // On appelle la méthode pour récupérer les messages (méthode de la classe ServiceMessage)
+                        try {
+                            retour = ServiceMessage.messageHistory();
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
                         // On appelle la méthode pour envoyer une réponse
                         sendResponse(sessionId, retour);
 
@@ -128,7 +143,7 @@ public class Main {
                             e.printStackTrace();
                         }
                         System.out.println("Message de" + sessionId + ": " + message);
-                        // On appelle la méthode pour ajouter un groupe (méthode de la classe CreateGroup)
+                        // On appelle la méthode pour ajouter un groupe (méthode de la classe ServiceGroup)
                         retour = ServiceGroup.createGroupFunction(createGroup);
                         // On appelle la méthode pour envoyer une réponse
                         sendResponse(sessionId, retour);

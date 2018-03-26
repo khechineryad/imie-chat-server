@@ -1,8 +1,10 @@
-package chat.action;
+package chat.services;
 
-import chat.function.Connect;
-import chat.function.RandomKeyGen;
-import chat.object.User;
+import chat.actions.AddUser;
+import chat.actions.SignIn;
+import chat.tools.Connect;
+import chat.tools.RandomKeyGen;
+import chat.objects.User;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -15,23 +17,36 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class SignIn extends Action {
-    private String email;
-    private String password;
+public class ServiceUser {
 
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    // Ici la fonction qui permet de sérialiser : transformer un object en JSON (String)
+    // Ici la fonction qui permet de sérialiser : transformer un objects en JSON (String)
     private static final ObjectMapper MAPPER = new ObjectMapper()
             .setDefaultVisibility(JsonAutoDetect.Value.construct(JsonAutoDetect.Visibility.ANY, JsonAutoDetect.Visibility.DEFAULT, JsonAutoDetect.Visibility.DEFAULT, JsonAutoDetect.Visibility.DEFAULT, JsonAutoDetect.Visibility.DEFAULT))
             .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+
+    // Méthode qui permet l'enregistrement en base de donnée de l'utilisateur
+    public static String addUserFunction(AddUser addUser) {
+
+        String returnContent;
+
+        // On se connecte à la base de données via la classe Connect
+        Connection connexion = Connect.getConnection();
+
+        // Création de l'objet gérant les requêtes
+        try {
+            Statement statement = connexion.createStatement();
+            // Exécution d'une requête d'écriture
+            int statut = statement.executeUpdate("INSERT INTO Utilisateur (pseudo, email, mot_de_passe) VALUES ('" + addUser.getUsername() + "', '" + addUser.getEmail() + "', '" + addUser.getPassword() + "');");
+            System.out.println("Nouvel utilisateur ajouté");
+
+            returnContent = "nouvel utilisateur enregistré";
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            returnContent = "problème lors de l'enregistrement de l'utilisateur";
+        }
+        return returnContent;
+    }
 
     // Méthode qui permet la connexion d'un utilisateur
     public static String signInFunction(SignIn signIn) {

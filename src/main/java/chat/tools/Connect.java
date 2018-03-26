@@ -1,4 +1,4 @@
-package chat.function;
+package chat.tools;
 
 import com.mysql.cj.jdbc.Driver;
 

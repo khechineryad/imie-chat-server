@@ -1,4 +1,4 @@
-package chat.action;
+package chat.actions;
 
 public class DeleteGroup extends Action {
     private String userKey;

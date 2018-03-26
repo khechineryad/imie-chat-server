@@ -1,4 +1,4 @@
-package chat.action;
+package chat.actions;
 
 public class DeleteMessage extends Action {
     private Integer idMessage;

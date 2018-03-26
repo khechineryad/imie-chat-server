@@ -1,6 +1,9 @@
 package chat;
 
-import chat.action.*;
+import chat.actions.*;
+import chat.services.ServiceGroup;
+import chat.services.ServiceMessage;
+import chat.services.ServiceUser;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -74,7 +77,7 @@ public class Main {
                         }
                         System.out.println("Message de " + sessionId + ": " + message +".\nBien reçu !");
                         // On appelle la méthode pour ajouter un utilisateur (méthode de la classe AddUser)
-                        retour = AddUser.addUserFunction(addUser);
+                        retour = ServiceUser.addUserFunction(addUser);
                         // On appelle la méthode pour envoyer une réponse
                         sendResponse(sessionId, retour);
 
@@ -92,13 +95,13 @@ public class Main {
                         System.out.println("Demande de connection de " + sessionId + ": " + message + "\nBien reçu");
                         System.out.println("adresse email: " + signIn.getEmail());
                         // On appelle la méthode pour connecter un utilisateur (méthode de la classe SignIn)
-                        retour = SignIn.signInFunction(signIn);
+                        retour = ServiceUser.signInFunction(signIn);
                         // On appelle la méthode pour envoyer une réponse
                         sendResponse(sessionId, retour);
 
                         break;
 
-                    // Si l'action est de type "message"
+                    // Si l'actions est de type "message"
                     case "message":
                         SendMessage sendMessage = null;
                         try {
@@ -109,7 +112,7 @@ public class Main {
                         }
                         System.out.println("Message de " + sessionId + ": " + message);
                         // On appelle la méthode pour retourner un message (méthode de la classe SendMessage)
-                        retour = SendMessage.sendMessageFunction(sendMessage);
+                        retour = ServiceMessage.sendMessageFunction(sendMessage);
                         // On appelle la méthode pour envoyer une réponse
                         sendResponse(sessionId, retour);
 
@@ -126,17 +129,17 @@ public class Main {
                         }
                         System.out.println("Message de" + sessionId + ": " + message);
                         // On appelle la méthode pour ajouter un groupe (méthode de la classe CreateGroup)
-                        retour = CreateGroup.createGroupFunction(createGroup);
+                        retour = ServiceGroup.createGroupFunction(createGroup);
                         // On appelle la méthode pour envoyer une réponse
                         sendResponse(sessionId, retour);
 
                         break;
 
-                    // Si aucune action
+                    // Si aucune actions
                     default:
                         Error error = new Error();
                         error.setType("error");
-                        error.setErrorInformation("Type d'action non reconnu");
+                        error.setErrorInformation("Type d'actions non reconnu");
                         try {
                             retour = MAPPER.writeValueAsString(error);
                         }

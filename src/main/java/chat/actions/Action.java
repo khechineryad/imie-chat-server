@@ -1,4 +1,4 @@
-package chat.action;
+package chat.actions;
 
 public class Action{
     public String type;

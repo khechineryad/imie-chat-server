@@ -1,31 +1,14 @@
-package chat.action;
+package chat.services;
 
-import chat.function.Connect;
+import chat.actions.CreateGroup;
+import chat.tools.Connect;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class CreateGroup extends Action {
-    private String userKey;
-    private String groupName;
-
-    public String getUserKey() {
-        return userKey;
-    }
-
-    public void setUserKey(String userKey) {
-        this.userKey = userKey;
-    }
-
-    public String getGroupName() {
-        return groupName;
-    }
-
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
-    }
+public class ServiceGroup {
 
     // Méthode qui permet l'enregistrement en base de donnée du groupe
     public static String createGroupFunction(CreateGroup createGroup) {

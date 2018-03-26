@@ -1,4 +1,4 @@
-package chat.action;
+package chat.actions;
 
 public class SignOut extends Action{
 }

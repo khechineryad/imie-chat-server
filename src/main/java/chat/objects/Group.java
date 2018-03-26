@@ -1,4 +1,4 @@
-package chat.object;
+package chat.objects;
 
 public class Group {
     private String groupName;

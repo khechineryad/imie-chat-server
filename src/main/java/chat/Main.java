@@ -130,6 +130,7 @@ public class Main {
                         }
                         // On appelle la méthode pour envoyer une réponse
                         sendResponse(sessionId, retour);
+                        System.out.println("Renvoie de l'historique: "+retour);
 
                         break;
 

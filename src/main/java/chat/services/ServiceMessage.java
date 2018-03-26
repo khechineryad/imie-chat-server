@@ -31,16 +31,6 @@ public class ServiceMessage {
         // Création de l'objet gérant les requêtes
         try {
             Statement statement = null;
-            try {
-                statement = connexion.createStatement();
-                PreparedStatement ps = connexion.prepareStatement("SELECT * FROM users WHERE id = ? AND apiKey = ?");
-                ps.setInt(1, 10);
-                ps.setString(2, "pouet");
-
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-
             // Exécution d'une requête de lecture
             try {
                 resultat = statement.executeQuery("SELECT id_utilisateur, pseudo FROM Utilisateur WHERE cle_session='" + sendMessage.getUserKey() + "';");

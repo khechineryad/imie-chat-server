@@ -14,9 +14,9 @@ public class Connect {
     {
         try
         {
-            String url = "jdbc:mysql://localhost/db_chat?serverTimezone=UTC";
+            String url = "jdbc:mysql://localhost/projet_chat?serverTimezone=UTC";
             String utilisateur = "root";
-            String motDePasse = "";
+            String motDePasse = "root";
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(url, utilisateur , motDePasse);
             System.out.println("Connexion à la base de données : ok");

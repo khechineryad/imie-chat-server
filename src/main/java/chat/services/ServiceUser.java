@@ -12,10 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class ServiceUser {
 
@@ -33,10 +30,16 @@ public class ServiceUser {
         Connection connexion = Connect.getConnection();
 
         // Création de l'objet gérant les requêtes
+
         try {
             Statement statement = connexion.createStatement();
             // Exécution d'une requête d'écriture
-            int statut = statement.executeUpdate("INSERT INTO Utilisateur (pseudo, email, mot_de_passe) VALUES ('" + addUser.getUsername() + "', '" + addUser.getEmail() + "', '" + addUser.getPassword() + "');");
+            PreparedStatement ps = connexion.prepareStatement("INSERT INTO Utilisateur (pseudo, email, mot_de_passe) VALUES (?, ?, ?)");
+            ps.setString(1, addUser.getUsername());
+            ps.setString(2, addUser.getEmail());
+            ps.setString(3, addUser.getPassword());
+            ps.executeUpdate();
+
             System.out.println("Nouvel utilisateur ajouté");
 
             returnContent = "nouvel utilisateur enregistré";
@@ -63,7 +66,11 @@ public class ServiceUser {
             Statement statement = connexion.createStatement();
 
             // Exécution d'une requête de lecture
-            resultat = statement.executeQuery("SELECT id_utilisateur, pseudo FROM Utilisateur WHERE email='" + signIn.getEmail() + "' AND mot_de_passe='" + signIn.getPassword() + "';");
+            PreparedStatement ps = connexion.prepareStatement("SELECT id_utilisateur, pseudo FROM Utilisateur WHERE email= ? AND mot_de_passe= ? ");
+            ps.setString(1, signIn.getEmail());
+            ps.setString(2, signIn.getPassword());
+
+            resultat = ps.executeQuery();
 
             System.out.println("Requête SQL effectuée !");
 
@@ -90,7 +97,13 @@ public class ServiceUser {
                 System.out.println(key);
 
                 // Exécution d'une requête d'écriture de la key en base de données
-                int statut = statement.executeUpdate("UPDATE Utilisateur SET cle_session ='" + key + "' WHERE email='" + signIn.getEmail() + "' AND mot_de_passe='" + signIn.getPassword() + "';");
+                PreparedStatement psx = connexion.prepareStatement("UPDATE Utilisateur SET cle_session= ? WHERE email= ? AND mot_de_passe= ? ");
+                psx.setString(1, String.valueOf(key));
+                psx.setString(2, signIn.getEmail());
+                psx.setString(3,signIn.getPassword());
+
+                psx.executeUpdate();
+
                 System.out.println("clé session utilisateur enregistrée");
 
                 // On créer un objet user pour stocker l'id et le pseudo

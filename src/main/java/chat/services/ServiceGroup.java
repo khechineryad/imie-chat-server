@@ -3,10 +3,7 @@ package chat.services;
 import chat.actions.CreateGroup;
 import chat.tools.Connect;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class ServiceGroup {
 
@@ -23,7 +20,11 @@ public class ServiceGroup {
         try {
             Statement statement = connexion.createStatement();
             // Exécution d'une requête de lecture
-            resultat = statement.executeQuery("SELECT id_utilisateur FROM Utilisateur WHERE cle_session='" + createGroup.getUserKey() + "';");
+
+            PreparedStatement ps = connexion.prepareStatement("SELECT id_utilisateur FROM Utilisateur WHERE cle_session= ? ");
+            ps.setString(1, createGroup.getUserKey());
+            resultat = ps.executeQuery();
+
 
             /* Récupération des données du résultat de la requête de lecture */
             while (resultat.next()) {
@@ -31,8 +32,11 @@ public class ServiceGroup {
                 int idUser = resultat.getInt("id_utilisateur");
                 System.out.println("Données retournées par la requête : ID = " + idUser + ".");
 
-                statement.executeUpdate("INSERT INTO Groupe (nom_groupe, id_utilisateur) VALUES ('" + createGroup.getGroupName() + "', '" + idUser + "');");
-                System.out.println("Nouveau groupe ajouté : " + createGroup.getGroupName() + ".");
+                PreparedStatement ps2 = connexion.prepareStatement("INSERT INTO Groupe (nom_groupe, id_utilisateur VALUES = ? , ? ");
+                ps.setString(1, createGroup.getGroupName());
+                ps.setInt(1, Integer.valueOf(idUser));
+
+                ps.executeUpdate();
             }
 
             returnContent = "nouveau groupe enregistré";
